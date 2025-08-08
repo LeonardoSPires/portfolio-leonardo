@@ -1,12 +1,16 @@
-import { HeroSection, Title, SubTitle } from './styles';
+import { Container, Title, Subtitle, Button, Image } from "./styles";
 
 export default function Hero() {
   return (
-    <HeroSection>
-      <Title>Leonardo da Silva Pires</Title>
-      <SubTitle>Desenvolvedor Web Front-End</SubTitle>
-      <p>Transformando ideias em interfaces modernas e responsivas.</p>
-    </HeroSection>
+    <Container id="hero">
+      <div>
+        <Title>Leonardo Pires</Title>
+        <Subtitle>Desenvolvedor React</Subtitle>
+        <Button href="#projects">Ver Projetos</Button>
+      </div>
+      <div>
+        <Image src="src\assets\fotoPortColor.png" alt="Leonardo Pires" />
+      </div>
+    </Container>
   );
 }
-

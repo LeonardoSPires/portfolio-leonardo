@@ -1,8 +1,10 @@
-import { ProjectsSection, ProjectCard, ProjectImage, ProjectTitle } from './styles';
+import { ProjectsSection, ProjectCard, ProjectImage, ProjectTitle, TitleProject, SubtitleProject, ContainerProjects } from './styles';
 
 import devmoviesImg from '../../assets/devmovies.png';
 import listatarefasImg from '../../assets/listatarefas.png';
 import newsImg from '../../assets/imagemnews.jpeg';
+
+
 
 export default function Projects() {
   const projects = [
@@ -24,7 +26,14 @@ export default function Projects() {
   ];
 
   return (
-    <ProjectsSection id="projects">
+  <ContainerProjects id="projects">  
+    <TitleProject>Projetos</TitleProject>
+    <SubtitleProject>
+      Confira alguns dos meus projetos desenvolvidos com React, Vite e Styled Components.
+    </SubtitleProject>
+      
+    <ProjectsSection >
+      
       {projects.map((project, index) => (
         <ProjectCard key={index}>
           <a href={project.link} target="_blank" rel="noreferrer">
@@ -34,5 +43,6 @@ export default function Projects() {
         </ProjectCard>
       ))}
     </ProjectsSection>
+  </ContainerProjects>
   );
 }
