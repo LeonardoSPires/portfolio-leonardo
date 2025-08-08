@@ -1,4 +1,5 @@
 import { Container, Title, Subtitle, Button, Image } from "./styles";
+import fotoPortColor from "../../assets/fotoPortColor.png"; // ajuste o caminho
 
 export default function Hero() {
   return (
@@ -9,7 +10,7 @@ export default function Hero() {
         <Button href="#projects">Ver Projetos</Button>
       </div>
       <div>
-        <Image src="src\assets\fotoPortColor.png" alt="Leonardo Pires" />
+        <Image src={fotoPortColor} alt="Leonardo Pires" />
       </div>
     </Container>
   );
