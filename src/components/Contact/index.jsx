@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Container, Left, Right, Title, Subtitle, Form, Input, Textarea, Button } from "./styles";
 
 export default function Contact() {

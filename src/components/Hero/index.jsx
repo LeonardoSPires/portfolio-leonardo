@@ -1,17 +1,20 @@
-import { Container, Title, Subtitle, Button, Image } from "./styles";
-import fotoPortColor from "../../assets/fotoPortColor.png"; // ajuste o caminho
+import React from "react";
+
+import { Container, Title, Subtitle, Button, Image, SectionHero } from "./styles";
+import fotoPortColor from "../../assets/fotoPortColor.png";
+
 
 export default function Hero() {
   return (
-    <Container id="hero">
-      <div>
+    <Container id="home">
+      <SectionHero>
         <Title>Leonardo Pires</Title>
         <Subtitle>Desenvolvedor React</Subtitle>
         <Button href="#projects">Ver Projetos</Button>
-      </div>
-      <div>
+      </SectionHero>
+      <SectionHero>
         <Image src={fotoPortColor} alt="Leonardo Pires" />
-      </div>
+      </SectionHero>
     </Container>
   );
 }

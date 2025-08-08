@@ -7,16 +7,30 @@ export const ContainerProjects = styled.div`
   text-align: center;
   justify-content: center;
   max-width: 1200px;
-  margin: 0px auto;
+  margin: 0 auto;
   height: 100vh;
   padding-top: 50px;
-`;
 
+  @media (max-width: 768px) {
+    height: auto;
+    padding-top: 30px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 20px;
+  }
+`;
 
 export const TitleProject = styled.h2`
   font-size: 2rem;
   color: #FF6B00;
   margin-bottom: 1rem;
+
+  @media (max-width: 480px) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const SubtitleProject = styled.p`
@@ -24,16 +38,28 @@ export const SubtitleProject = styled.p`
   color: #B3B3B3;
   max-width: 700px;
   margin-bottom: 2rem;
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    max-width: 100%;
+    padding: 0 10px;
+  }
 `;
 
 export const ProjectsSection = styled.section`
-  width: 100%;
+  width: 95%;
   background-color: #0D0D0D;
+  border-radius: 5px;
   padding: 4rem 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   justify-items: center;
+
+  @media (max-width: 480px) {
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
 `;
 
 export const ProjectCard = styled.div`
@@ -62,6 +88,10 @@ export const ProjectImage = styled.img`
   width: 100%;
   height: 200px;
   object-fit: cover;
+
+  @media (max-width: 480px) {
+    height: 150px;
+  }
 `;
 
 export const ProjectTitle = styled.h3`
@@ -69,4 +99,8 @@ export const ProjectTitle = styled.h3`
   color: #FF6B00;
   font-size: 1.2rem;
   text-align: center;
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;

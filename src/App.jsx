@@ -1,4 +1,3 @@
-// App.jsx (ou App.js)
 import React from "react";
 import { GlobalStyle } from './globalStyles';  // arquivo com createGlobalStyle
 import Header from './components/Header';

@@ -1,3 +1,5 @@
+import React from "react";
+
 import { ProjectsSection, ProjectCard, ProjectImage, ProjectTitle, TitleProject, SubtitleProject, ContainerProjects } from './styles';
 
 import devmoviesImg from '../../assets/devmovies.png';

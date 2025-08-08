@@ -11,6 +11,11 @@ export const FooterContainer = styled.footer`
   a:hover {
     color: #FF6B00;
   }
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
 `;
 
 export const FooterLink = styled.a`
@@ -21,5 +26,9 @@ export const FooterLink = styled.a`
 
   &:hover {
     color: #FF6B00;
+  }
+
+  @media (max-width: 480px) {
+    margin: 0 0.3rem;
   }
 `;

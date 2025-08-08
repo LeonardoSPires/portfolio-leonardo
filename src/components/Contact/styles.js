@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import backgroundImage from "../../assets/contact-bg.png"; // coloque sua imagem aqui
+import backgroundImage from "../../assets/contact-bg.png";
 
 export const Container = styled.section`
   display: flex;
@@ -18,6 +18,12 @@ export const Container = styled.section`
   padding: 60px 20px;
   color: #fff;
   height: 100vh;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 15px;
+  }
 `;
 
 export const Left = styled.div`
@@ -27,6 +33,12 @@ export const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 10px 0;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 export const Right = styled.div`
@@ -35,12 +47,21 @@ export const Right = styled.div`
   padding: 20px;
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 10px 0;
+    width: 100%;
+  }
 `;
 
 export const Title = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 10px;
   font-family: 'Poppins', sans-serif;
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
 `;
 
 export const Subtitle = styled.p`
@@ -48,6 +69,10 @@ export const Subtitle = styled.p`
   color: #ccc;
   line-height: 1.6;
   font-family: 'Poppins', sans-serif;
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 export const Form = styled.form`
@@ -102,6 +127,6 @@ export const Button = styled.button`
   font-family: 'Poppins', sans-serif;
 
   &:hover {
-    background: #ff5e00;
+    background: #ff5e00ff;
   }
 `;

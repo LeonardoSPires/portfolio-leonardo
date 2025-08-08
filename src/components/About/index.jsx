@@ -1,3 +1,4 @@
+import React from "react";
 
 import { Container, Content, Title, Text } from "./styles";
  // Certifique-se de que o caminho está correto
