@@ -1,132 +1,130 @@
 import styled from "styled-components";
-import backgroundImage from "../../assets/contact-bg.png";
 
 export const Container = styled.section`
   display: flex;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  background: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.85) 0%,
-      rgba(0, 0, 0, 0.7) 40%,
-      rgba(0, 0, 0, 0.5) 100%
-    ),
-    url(${backgroundImage});
-  background-size: cover;
-  background-position: center;
-  padding: 60px 20px;
-  color: #fff;
-  height: 100vh;
+  background: #0d0d0d;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    height: auto;
-    padding: 40px 15px;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
   }
 `;
 
 export const Left = styled.div`
   flex: 1;
-  min-width: 280px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  min-width: 300px;
 
   @media (max-width: 768px) {
-    padding: 10px 0;
-    align-items: center;
     text-align: center;
   }
 `;
 
 export const Right = styled.div`
   flex: 1;
-  min-width: 280px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-
-  @media (max-width: 768px) {
-    padding: 10px 0;
-    width: 100%;
-  }
+  min-width: 300px;
+  width: 100%;
 `;
 
 export const Title = styled.h2`
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
 
-  @media (max-width: 480px) {
-    font-size: 2rem;
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
   }
 `;
 
 export const Subtitle = styled.p`
-  font-size: 1.1rem;
-  color: #ccc;
-  line-height: 1.6;
-  font-family: 'Poppins', sans-serif;
+  color: #bbb;
+  font-size: 1rem;
+  line-height: 1.5;
 
-  @media (max-width: 480px) {
-    font-size: 1rem;
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
   }
 `;
 
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  width: 100%;
+  gap: 1rem;
 `;
 
 export const Input = styled.input`
-  padding: 12px;
+  padding: 0.8rem;
   border: none;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  background: #222;
   color: #fff;
-  font-size: 1rem;
   outline: none;
-  transition: background 0.3s ease;
-  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
 
-  &:focus {
-    background: rgba(255, 255, 255, 0.2);
+  &::placeholder {
+    color: #777;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    padding: 0.7rem;
   }
 `;
 
 export const Textarea = styled.textarea`
-  padding: 12px;
+  padding: 0.8rem;
   border: none;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  background: #222;
   color: #fff;
-  font-size: 1rem;
   outline: none;
   resize: none;
-  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
 
-  &:focus {
-    background: rgba(255, 255, 255, 0.2);
+  &::placeholder {
+    color: #777;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    padding: 0.7rem;
   }
 `;
 
 export const Button = styled.button`
-  padding: 14px;
-  border: none;
-  border-radius: 8px;
-  background: #ff7b00;
+  background: #ff5722;
   color: #fff;
-  font-size: 1.1rem;
-  font-weight: bold;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
-  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
 
   &:hover {
-    background: #ff5e00ff;
+    background: #e03400ff;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+`;
+
+export const StatusMessage = styled.p`
+  font-size: 0.9rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  text-align: center;
+  color: ${({ $type }) => ($type === "success" ? "#d4edda" : "#f8d7da")};
+  background: ${({ $type }) => ($type === "success" ? "#155724" : "#721c24")};
+  opacity: 0.9;
+
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
   }
 `;

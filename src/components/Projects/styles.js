@@ -8,20 +8,23 @@ export const ContainerProjects = styled.div`
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-  height: 100vh;
-  padding-top: 50px;
+  /* height: 100vh;  REMOVIDO */
+  padding: 50px 20px;  /* padding vertical + horizontal */
 
   @media (max-width: 768px) {
-    height: auto;
-    padding-top: 30px;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 30px 15px;
   }
 
   @media (max-width: 480px) {
-    padding-top: 20px;
+    padding: 20px 10px;
+  }
+
+  /* Para landscape mobile, só um pouco mais de padding */
+  @media (max-width: 768px) and (orientation: landscape) {
+    padding: 20px 30px;
   }
 `;
+
 
 export const TitleProject = styled.h2`
   font-size: 2rem;
@@ -30,6 +33,10 @@ export const TitleProject = styled.h2`
 
   @media (max-width: 480px) {
     font-size: 1.6rem;
+  }
+
+  @media (max-width: 768px) and (orientation: landscape) {
+    font-size: 1.8rem;
   }
 `;
 
@@ -43,6 +50,11 @@ export const SubtitleProject = styled.p`
     font-size: 1rem;
     max-width: 100%;
     padding: 0 10px;
+  }
+
+  @media (max-width: 768px) and (orientation: landscape) {
+    font-size: 1.1rem;
+    max-width: 90%;
   }
 `;
 
@@ -59,6 +71,11 @@ export const ProjectsSection = styled.section`
   @media (max-width: 480px) {
     padding: 2rem 1rem;
     gap: 1rem;
+  }
+
+  @media (max-width: 768px) and (orientation: landscape) {
+    padding: 3rem 1.5rem;
+    gap: 1.5rem;
   }
 `;
 
@@ -82,6 +99,10 @@ export const ProjectCard = styled.div`
     flex-direction: column;
     height: 100%;
   }
+
+  @media (max-width: 768px) and (orientation: landscape) {
+    max-width: 300px;
+  }
 `;
 
 export const ProjectImage = styled.img`
@@ -91,6 +112,10 @@ export const ProjectImage = styled.img`
 
   @media (max-width: 480px) {
     height: 150px;
+  }
+
+  @media (max-width: 768px) and (orientation: landscape) {
+    height: 170px;
   }
 `;
 
@@ -102,5 +127,9 @@ export const ProjectTitle = styled.h3`
 
   @media (max-width: 480px) {
     font-size: 1rem;
+  }
+
+  @media (max-width: 768px) and (orientation: landscape) {
+    font-size: 1.1rem;
   }
 `;

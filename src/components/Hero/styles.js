@@ -91,6 +91,10 @@ export const Button = styled.a`
   font-weight: bold;
   z-index: 4;
 
+   &:hover {
+    background: #e03400ff;
+  }
+
   @media (max-width: 768px) {
     padding: 0.8rem 1.5rem;
   }
