@@ -56,11 +56,11 @@ export const Title = styled.h2`
   margin-bottom: 20px;
 
   @media (max-width: 768px) {
-    font-size: 2.2rem;
+    font-size: 1%.8;
   }
 
   @media (max-width: 480px) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 `;
 

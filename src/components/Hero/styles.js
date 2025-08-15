@@ -27,7 +27,7 @@ export const Container = styled.section`
     z-index: 4;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 368px) {
     flex-direction: column;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -35,6 +35,9 @@ export const Container = styled.section`
     height: auto;
     justify-content: center;
     text-align: center;
+  }
+  @media (max-width: 768px) {
+    flex-direction: row;
   }
 `;
 
@@ -57,13 +60,13 @@ export const Title = styled.h1`
   text-shadow: 5px 5px 10px #ff5722;
   color: white;
   
-  @media (max-width: 768px) {
-    font-size: 2.5rem;
+  @media (max-width: 900px) {
+    font-size: 2.2rem;
   }
 `;
 
 export const Subtitle = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 2rem;
   color: #B3B3B3;
 
@@ -94,4 +97,7 @@ export const Image = styled(motion.img)`
   height: 100vh;
   border-radius: 16px;
   object-fit: cover;
+  @media (max-width: 768px) {
+    height: auto;
+  }
 `;

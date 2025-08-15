@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, SectionHero, Title, Subtitle, Button, Image } from "./styles";
-import fotoPortColor from "../../assets/fotoPortColor.png";
+import fotoPortColor from "../../assets/fotoHero.png";
 
 export default function Hero() {
   return (

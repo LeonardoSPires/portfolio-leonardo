@@ -6,8 +6,6 @@ import devmoviesImg from '../../assets/devmovies.png';
 import listatarefasImg from '../../assets/listatarefas.png';
 import newsImg from '../../assets/imagemnews.jpeg';
 
-
-
 export default function Projects() {
   const projects = [
     {
@@ -28,7 +26,8 @@ export default function Projects() {
   ];
 
   return (
-  <ContainerProjects id="projects" initial={{ opacity: 0, y: 50 }}      // começa invisível e deslocado para baixo
+  <ContainerProjects id="projects" 
+      initial={{ opacity: 0, y: 50 }}      // começa invisível e deslocado para baixo
       whileInView={{ opacity: 1, y: 0 }}  // anima ao entrar na tela
       viewport={{ once: true, amount: 0.3 }} // anima apenas uma vez quando 30% visível
       transition={{ duration: 0.8, ease: "easeOut" }}>  
@@ -36,9 +35,13 @@ export default function Projects() {
     <SubtitleProject>
       Confira alguns dos meus projetos desenvolvidos com React, Vite e Styled Components.
     </SubtitleProject>
-      
-    <ProjectsSection >
-      
+
+    <ProjectsSection 
+      initial={{ opacity: 0, x: 50 }}      // começa invisível e deslocado para baixo
+      whileInView={{ opacity: 1, x: 0 }}  // anima ao entrar na tela
+      viewport={{ once: true, amount: 0.3 }} // anima apenas uma vez quando 30% visível
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}>
+
       {projects.map((project, index) => (
         <ProjectCard key={index}>
           <a href={project.link} target="_blank" rel="noreferrer">

@@ -59,7 +59,7 @@ export const SubtitleProject = styled.p`
   }
 `;
 
-export const ProjectsSection = styled.section`
+export const ProjectsSection = styled(motion.section)`
   width: 95%;
   background-color: #0D0D0D;
   border-radius: 5px;
