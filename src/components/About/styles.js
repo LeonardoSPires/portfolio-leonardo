@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ImagemAbout from "../../assets/imagemAbout.png";
+import { motion } from "framer-motion";
 
 export const Container = styled.section`
   height: 100vh;
@@ -39,7 +40,7 @@ export const Container = styled.section`
   }
 `;
 
-export const Content = styled.div`
+export const Content = styled(motion.div)`
   max-width: 800px;
   text-align: left;
 

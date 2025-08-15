@@ -28,7 +28,10 @@ export default function Projects() {
   ];
 
   return (
-  <ContainerProjects id="projects">  
+  <ContainerProjects id="projects" initial={{ opacity: 0, y: 50 }}      // começa invisível e deslocado para baixo
+      whileInView={{ opacity: 1, y: 0 }}  // anima ao entrar na tela
+      viewport={{ once: true, amount: 0.3 }} // anima apenas uma vez quando 30% visível
+      transition={{ duration: 0.8, ease: "easeOut" }}>  
     <TitleProject>Projetos</TitleProject>
     <SubtitleProject>
       Confira alguns dos meus projetos desenvolvidos com React, Vite e Styled Components.

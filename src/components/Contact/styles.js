@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Container = styled.section`
   display: flex;
@@ -15,7 +16,7 @@ export const Container = styled.section`
   }
 `;
 
-export const Left = styled.div`
+export const Left = styled(motion.div)`
   flex: 1;
   min-width: 300px;
 
@@ -24,7 +25,7 @@ export const Left = styled.div`
   }
 `;
 
-export const Right = styled.div`
+export const Right = styled(motion.div)`
   flex: 1;
   min-width: 300px;
   width: 100%;

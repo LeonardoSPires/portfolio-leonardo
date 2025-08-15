@@ -43,7 +43,12 @@ export default function Contact() {
 
   return (
     <Container id="contact">
-      <Left>
+      <Left 
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.8 }}
+      >
         <Title>Vamos conversar?</Title>
         <Subtitle>
           Tem um projeto em mente ou quer apenas trocar ideias?  
@@ -51,7 +56,12 @@ export default function Contact() {
         </Subtitle>
       </Left>
 
-      <Right>
+      <Right  
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1.2, ease: "easeOut"}}
+      >
         <Form onSubmit={handleSubmit}>
           <Input type="text" name="name" placeholder="Seu nome" required />
           <Input type="email" name="email" placeholder="Seu email" required />

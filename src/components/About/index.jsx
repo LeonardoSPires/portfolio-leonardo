@@ -6,7 +6,12 @@ import { Container, Content, Title, Text } from "./styles";
 export default function About() {
   return (
     <Container id="about">
-      <Content>
+      <Content 
+      initial={{ opacity: 0, y: 50 }}      // começa invisível e deslocado para baixo
+      whileInView={{ opacity: 1, y: 0 }}  // anima ao entrar na tela
+      viewport={{ once: true, amount: 0.3 }} // anima apenas uma vez quando 30% visível
+      transition={{ duration: 0.8, ease: "easeOut" }} 
+      >
         <Title>Sobre mim</Title>
         
         <Text>
