@@ -67,7 +67,8 @@ h1, h2, h3 {
   display: flex;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
+  height: 80px;
   justify-content: space-between;
   align-items: center;
   border-bottom: ${({scrolled:a})=>a?"1px solid #333":"none"};
@@ -164,7 +165,7 @@ h1, h2, h3 {
     z-index: 4;
   }
 
-  @media (max-width: 368px) {
+  @media (max-width: 450px) {
     flex-direction: column;
     padding-left: 1rem;
     padding-right: 1rem;
