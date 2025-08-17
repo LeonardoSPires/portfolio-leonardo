@@ -32,7 +32,6 @@ export const Container = styled.section`
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 8rem;
-    height: auto;
     justify-content: center;
     text-align: center;
   }
