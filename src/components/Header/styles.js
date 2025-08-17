@@ -8,7 +8,8 @@ export const Container = styled.header.withConfig({
   display: flex;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
+  height: 80px;
   justify-content: space-between;
   align-items: center;
   border-bottom: ${({ scrolled }) =>

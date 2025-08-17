@@ -27,7 +27,7 @@ export const Container = styled.section`
     z-index: 4;
   }
 
-  @media (max-width: 368px) {
+  @media (max-width: 450px) {
     flex-direction: column;
     padding-left: 1rem;
     padding-right: 1rem;
