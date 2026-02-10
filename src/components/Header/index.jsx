@@ -13,7 +13,7 @@ const Header = () => {
         </Nav>
         <HeaderCta href="#contact">Vamos conversar</HeaderCta>
       </HeaderInner>
-    </HeaderBar>
+    </HeaderBar> 
   );
 };
 
