@@ -1,95 +1,72 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const Container = styled.header.withConfig({
-  shouldForwardProp: (prop) => prop !== "scrolled"
-})`
-  background-color: ${({ scrolled }) => (scrolled ? "#0D0D0D" : "transparent")};
-  padding: 1.5rem 2rem;
-  display: flex;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 80px;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: ${({ scrolled }) =>
-    scrolled ? "1px solid #333" : "none"};
-  transition: background-color 0.5s ease, border-bottom 0.3s ease;
-  z-index: 1000;
+export const HeaderBar = styled.header`
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background: rgba(247, 246, 242, 0.85);
+	backdrop-filter: blur(16px);
+	border-bottom: 1px solid var(--stroke);
 `;
 
+export const HeaderInner = styled.div`
+	max-width: 1120px;
+	margin: 0 auto;
+	padding: 20px 24px;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	gap: 24px;
 
-// o resto permanece igual
+	@media (max-width: 900px) {
+		grid-template-columns: auto auto;
+		justify-content: space-between;
+	}
+`;
 
-
-export const Logo = styled.h1`
-  font-size: 1.5rem;
-  color: #F5F5F5;
+export const Brand = styled.a`
+	font-family: var(--font-title);
+	font-weight: 700;
+	font-size: 1.25rem;
+	letter-spacing: 0.06em;
 `;
 
 export const Nav = styled.nav`
-  display: flex;
-  gap: 1.5rem;
+	display: flex;
+	gap: 20px;
+	justify-content: center;
 
-  @media (max-width: 768px) {
-    display: none;
-  }
+	@media (max-width: 900px) {
+		display: none;
+	}
 `;
 
 export const NavLink = styled.a`
-  color: #B3B3B3;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+	color: var(--muted);
+	font-size: 0.95rem;
+	transition: color 0.2s ease;
 
-  &:hover {
-    color: #FF6B00;
-  }
+	&:hover {
+		color: var(--text);
+	}
 `;
 
-// Botão hamburguer (quadrado com 3 linhas)
-export const Hamburger = styled.button`
-  display: none;
-  cursor: pointer;
-  width: 30px;
-  height: 22px;
-  flex-direction: column;
-  justify-content: space-between;
-  background: transparent;
-  border: none;
-  padding: 0;
+export const HeaderCta = styled.a`
+	padding: 10px 18px;
+	border-radius: 999px;
+	background: var(--accent);
+	color: #fff;
+	font-weight: 700;
+	font-size: 0.9rem;
+	box-shadow: 0 12px 25px rgba(28, 77, 93, 0.25);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-  div {
-    height: 4px;
-    background-color: #FF6B00;
-    border-radius: 2px;
-  }
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 16px 30px rgba(28, 77, 93, 0.3);
+	}
 
-  @media (max-width: 768px) {
-    display: flex;
-  }
-`;
-
-// Menu mobile fixo no canto direito
-export const MobileMenu = styled.nav`
-  position: fixed;
-  top: 60px; /* altura do header */
-  right: 1rem;
-  background-color: #0D0D0D;
-  border: 1px solid #FF6B00;
-  border-radius: 8px;
-  padding: 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  z-index: 1100;
-  min-width: 150px;
-`;
-
-// Fundo escuro transparente para fechar menu clicando fora
-export const Overlay = styled.div`
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  z-index: 1050;
+	@media (max-width: 900px) {
+		font-size: 0.85rem;
+	}
 `;

@@ -1,34 +1,34 @@
 import styled from 'styled-components';
 
-export const FooterContainer = styled.footer`
-  background-color: #d25700ff;
-  color: #F5F5F5;
-  padding: 2rem;
-  text-align: center;
-  border-top: 1px solid #333;
-  font-size: 0.95rem;
-
-  a:hover {
-    color: #FF6B00;
-  }
-
-  @media (max-width: 480px) {
-    padding: 1rem;
-    font-size: 0.85rem;
-  }
+export const FooterBar = styled.footer`
+	padding: 32px 24px 48px;
+	border-top: 1px solid var(--stroke);
 `;
 
-export const FooterLink = styled.a`
-  color: #B3B3B3;
-  margin: 0 0.5rem;
-  text-decoration: none;
-  transition: color 0.3s;
+export const FooterInner = styled.div`
+	max-width: 1120px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+	flex-wrap: wrap;
 
-  &:hover {
-    color: #FF6B00;
-  }
+	p {
+		color: var(--muted);
+	}
+`;
 
-  @media (max-width: 480px) {
-    margin: 0 0.3rem;
-  }
+export const FooterLinks = styled.div`
+	display: flex;
+	gap: 16px;
+	color: var(--muted);
+
+	a {
+		transition: color 0.2s ease;
+	}
+
+	a:hover {
+		color: var(--text);
+	}
 `;

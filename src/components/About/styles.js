@@ -1,80 +1,55 @@
-import styled from "styled-components";
-import ImagemAbout from "../../assets/imagemAbout.png";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
 
-export const Container = styled.section`
-  height: 100vh;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  color: white;
-  margin: 150px 100px;
-
-  background: 
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 1) 5%,
-      rgba(0, 0, 0, 0) 40%,
-      rgba(0, 0, 0, 0) 60%,
-      rgba(0, 0, 0, 1) 100%
-    ),
-    url(${ImagemAbout});
-  background-size: cover;
-  background-position: center;
-
-  @media (max-width: 1024px) {
-    margin: 120px 50px;
-  }
-
-  @media (max-width: 768px) {
-    height: auto;
-    margin: 80px 20px;
-    padding: 40px 10px;
-    align-items: center;
-    text-align: center;
-  }
-
-  @media (max-width: 480px) {
-    margin: 60px 10px;
-    padding: 20px 5px;
-  }
+export const AboutSection = styled.section`
+	padding: 60px 24px;
 `;
 
-export const Content = styled(motion.div)`
-  max-width: 800px;
-  text-align: left;
-
-  @media (max-width: 768px) {
-    max-width: 100%;
-    text-align: center;
-  }
+export const AboutInner = styled.div`
+	max-width: 1120px;
+	margin: 0 auto;
+	display: grid;
+	gap: 32px;
 `;
 
-export const Title = styled.h2`
-  color: #FF6B00;
-  font-size: 3rem;
-  margin-bottom: 20px;
-
-  @media (max-width: 768px) {
-    font-size: 1%.8;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1.6rem;
-  }
+export const AboutText = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
 `;
 
-export const Text = styled.p`
-  color: #B3B3B3;
-  font-size: 1.4rem;
-  line-height: 1.5;
-  font-weight: bold;
+export const AboutTitle = styled.h2`
+	font-family: var(--font-title);
+	font-size: clamp(2rem, 3vw, 2.6rem);
+`;
 
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-  }
+export const AboutLead = styled.p`
+	color: var(--muted);
+	max-width: 720px;
+`;
 
-  @media (max-width: 480px) {
-    font-size: 1rem;
-  }
+export const AboutGrid = styled.div`
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 20px;
+
+	@media (max-width: 900px) {
+		grid-template-columns: 1fr;
+	}
+`;
+
+export const AboutCard = styled.div`
+	background: var(--surface);
+	border-radius: var(--radius-md);
+	padding: 24px;
+	border: 1px solid var(--stroke);
+	box-shadow: 0 20px 40px rgba(15, 45, 55, 0.08);
+
+	h4 {
+		font-family: var(--font-title);
+		margin-bottom: 8px;
+	}
+
+	p {
+		color: var(--muted);
+	}
 `;

@@ -1,136 +1,96 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
 
-export const ContainerProjects = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  /* height: 100vh;  REMOVIDO */
-  padding: 50px 20px;  /* padding vertical + horizontal */
-
-  @media (max-width: 768px) {
-    padding: 30px 15px;
-  }
-
-  @media (max-width: 480px) {
-    padding: 20px 10px;
-  }
-
-  /* Para landscape mobile, só um pouco mais de padding */
-  @media (max-width: 768px) and (orientation: landscape) {
-    padding: 20px 30px;
-  }
+export const ProjectsSection = styled.section`
+	padding: 60px 24px 80px;
 `;
 
-
-export const TitleProject = styled.h2`
-  font-size: 2rem;
-  color: #FF6B00;
-  margin-bottom: 1rem;
-
-  @media (max-width: 480px) {
-    font-size: 1.6rem;
-  }
-
-  @media (max-width: 768px) and (orientation: landscape) {
-    font-size: 1.8rem;
-  }
+export const ProjectsInner = styled.div`
+	max-width: 1120px;
+	margin: 0 auto;
+	display: grid;
+	gap: 32px;
 `;
 
-export const SubtitleProject = styled.p`
-  font-size: 1.25rem;
-  color: #B3B3B3;
-  max-width: 700px;
-  margin-bottom: 2rem;
-
-  @media (max-width: 480px) {
-    font-size: 1rem;
-    max-width: 100%;
-    padding: 0 10px;
-  }
-
-  @media (max-width: 768px) and (orientation: landscape) {
-    font-size: 1.1rem;
-    max-width: 90%;
-  }
+export const ProjectsHeader = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
 `;
 
-export const ProjectsSection = styled(motion.section)`
-  width: 95%;
-  background-color: #0D0D0D;
-  border-radius: 5px;
-  padding: 4rem 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  justify-items: center;
-
-  @media (max-width: 480px) {
-    padding: 2rem 1rem;
-    gap: 1rem;
-  }
-
-  @media (max-width: 768px) and (orientation: landscape) {
-    padding: 3rem 1.5rem;
-    gap: 1.5rem;
-  }
+export const ProjectsTitle = styled.h2`
+	font-family: var(--font-title);
+	font-size: clamp(2rem, 3vw, 2.6rem);
 `;
 
-export const ProjectCard = styled.div`
-  background-color: #1A1A1A;
-  border-left: 4px solid #FF6B00;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 350px;
-  width: 100%;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(255, 107, 0, 0.25);
-  }
-
-  a {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  @media (max-width: 768px) and (orientation: landscape) {
-    max-width: 300px;
-  }
+export const ProjectsSubtitle = styled.p`
+	color: var(--muted);
+	max-width: 640px;
 `;
 
-export const ProjectImage = styled.img`
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+export const ProjectsGrid = styled.div`
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 20px;
 
-  @media (max-width: 480px) {
-    height: 150px;
-  }
-
-  @media (max-width: 768px) and (orientation: landscape) {
-    height: 170px;
-  }
+	@media (max-width: 900px) {
+		grid-template-columns: 1fr;
+	}
 `;
 
-export const ProjectTitle = styled.h3`
-  padding: 1rem;
-  color: #FF6B00;
-  font-size: 1.2rem;
-  text-align: center;
+export const ProjectCard = styled.article`
+	background: var(--surface);
+	padding: 26px;
+	border-radius: var(--radius-md);
+	border: 1px solid var(--stroke);
+	box-shadow: 0 20px 40px rgba(15, 45, 55, 0.08);
+	display: grid;
+	gap: 12px;
 
-  @media (max-width: 480px) {
-    font-size: 1rem;
-  }
+	h4 {
+		font-family: var(--font-title);
+		font-size: 1.2rem;
+	}
 
-  @media (max-width: 768px) and (orientation: landscape) {
-    font-size: 1.1rem;
-  }
+	p {
+		color: var(--muted);
+	}
+
+	a {
+		color: var(--accent);
+		font-weight: 600;
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		text-decoration: none;
+		transition: color 0.2s ease, transform 0.2s ease, background-size 0.2s ease;
+		background-image: linear-gradient(currentColor, currentColor);
+		background-size: 0% 2px;
+		background-position: 0 100%;
+		background-repeat: no-repeat;
+	}
+
+	a:hover {
+		color: var(--accent-strong);
+		transform: translateY(-2px);
+		background-size: 100% 2px;
+	}
+`;
+
+export const ProjectMeta = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	align-items: center;
+	
+
+	span {
+		padding: 6px 12px;
+		border-radius: 999px;
+		background: var(--surface-alt);
+		border: 1px solid var(--stroke);
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: var(--muted);
+	}
 `;

@@ -1,18 +1,19 @@
-import React from "react";
+import React from 'react';
+import { FooterBar, FooterInner, FooterLinks } from './styles';
 
-import { FooterLink, FooterContainer } from './styles';
-
-
-export default function Footer() {
+const Footer = () => {
   return (
-    <FooterContainer>
-      <p>E-mail: 
-         <a href="mailto:leopires1988@gmail.com"> leopires1988@gmail.com</a>
-         </p>
-      <p>
-        <FooterLink href="https://github.com/leonardospires" target="_blank" rel="noreferrer">GitHub</FooterLink>|
-        <FooterLink href="https://linkedin.com/in/leonardodasilvapires" target="_blank" rel="noreferrer">LinkedIn</FooterLink>
-      </p>
-    </FooterContainer>
+    <FooterBar>
+      <FooterInner>
+        <p>(c) 2026 Leonardo da Silva Pires. Todos os direitos reservados.</p>
+        <FooterLinks>
+          <a href="#home">Inicio</a>
+          <a href="#projects">Projetos</a>
+          <a href="#contact">Contato</a>
+        </FooterLinks>
+      </FooterInner>
+    </FooterBar>
   );
-}
+};
+
+export default Footer;

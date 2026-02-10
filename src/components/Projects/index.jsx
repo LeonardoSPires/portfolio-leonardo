@@ -1,56 +1,70 @@
-import React from "react";
+import React from 'react';
+import {
+  ProjectsSection,
+  ProjectsInner,
+  ProjectsHeader,
+  ProjectsTitle,
+  ProjectsSubtitle,
+  ProjectsGrid,
+  ProjectCard,
+  ProjectMeta,
+} from './styles';
 
-import { ProjectsSection, ProjectCard, ProjectImage, ProjectTitle, TitleProject, SubtitleProject, ContainerProjects } from './styles';
+const projects = [
+  {
+    title: 'Palestrante Elga',
+    description: 'Site institucional com foco em autoridade e conversao.',
+    tags: ['React', 'Vite', 'Styled Components'],
+    url: 'https://www.elgacosta.com.br/',
+  },
+  {
+    title: 'Eua For Adults',
+    description: 'Site para aulas particulares de ingles com visual limpo.',
+    tags: ['React', 'Vite', 'Styled Components'],
+    url: 'https://euaforadults.com',
+  },
+  {
+    title: 'Dev Movies',
+    description: 'Resumo de filmes com trailer e dados via API.',
+    tags: ['React', 'API', 'UI'],
+    url: 'https://leonardospires.github.io/dev-movies/',
+  },
+];
 
-import devmoviesImg from '../../assets/devmovies.png';
-import listatarefasImg from '../../assets/listatarefas.png';
-import newsImg from '../../assets/imagemnews.jpeg';
-
-export default function Projects() {
-  const projects = [
-    {
-      title: 'DevMovies',
-      link: 'https://leonardospires.github.io/dev-movies/',
-      img: devmoviesImg,
-    },
-    {
-      title: 'Lista de Tarefas',
-      link: 'https://leonardospires.github.io/React-lista-produtos/',
-      img: listatarefasImg,
-    },
-    {
-      title: 'News',
-      link: 'https://leonardospires.github.io/dashboard-insights/',
-      img: newsImg,
-    },
-  ];
-
+const Projects = () => {
   return (
-  <ContainerProjects id="projects" 
-      initial={{ opacity: 0, y: 50 }}      // começa invisível e deslocado para baixo
-      whileInView={{ opacity: 1, y: 0 }}  // anima ao entrar na tela
-      viewport={{ once: true, amount: 0.3 }} // anima apenas uma vez quando 30% visível
-      transition={{ duration: 0.8, ease: "easeOut" }}>  
-    <TitleProject>Projetos</TitleProject>
-    <SubtitleProject>
-      Confira alguns dos meus projetos desenvolvidos com React, Vite e Styled Components.
-    </SubtitleProject>
-
-    <ProjectsSection 
-      initial={{ opacity: 0, x: 50 }}      // começa invisível e deslocado para baixo
-      whileInView={{ opacity: 1, x: 0 }}  // anima ao entrar na tela
-      viewport={{ once: true, amount: 0.3 }} // anima apenas uma vez quando 30% visível
-      transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}>
-
-      {projects.map((project, index) => (
-        <ProjectCard key={index}>
-          <a href={project.link} target="_blank" rel="noreferrer">
-            <ProjectImage src={project.img} alt={project.title} />
-            <ProjectTitle>{project.title}</ProjectTitle>
-          </a>
-        </ProjectCard>
-      ))}
+    <ProjectsSection id="projects">
+      <ProjectsInner>
+        <ProjectsHeader>
+          <ProjectsTitle>Projetos em destaque</ProjectsTitle>
+          <ProjectsSubtitle>
+            Alguns trabalhos recentes com foco em clareza e impacto visual.
+          </ProjectsSubtitle>
+        </ProjectsHeader>
+        <ProjectsGrid>
+          {projects.map((project) => (
+            <ProjectCard key={project.title}>
+              <h4>
+                {project.url ? (
+                  <a href={project.url} target="_blank" rel="noopener noreferrer">
+                    {project.title}
+                  </a>
+                ) : (
+                  project.title
+                )}
+              </h4>
+              <p>{project.description}</p>
+              <ProjectMeta>
+                {project.tags.map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
+              </ProjectMeta>
+            </ProjectCard>
+          ))}
+        </ProjectsGrid>
+      </ProjectsInner>
     </ProjectsSection>
-  </ContainerProjects>
   );
-}
+};
+
+export default Projects;

@@ -1,102 +1,124 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
 
-export const Container = styled.section`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 4rem;
-  flex-wrap: wrap;
-  height: 100vh;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 5;
-    background: linear-gradient(
-      to bottom, 
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.9) 100%
-    );
-  }
-
-  > * {
-    position: relative;
-    z-index: 4;
-  }
-
-  @media (max-width: 450px) {
-    flex-direction: column;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 8rem;
-    justify-content: center;
-    text-align: center;
-  }
-  @media (max-width: 768px) {
-    flex-direction: row;
-  }
+export const HeroSection = styled.section`
+	padding: 96px 24px 60px;
 `;
 
-export const SectionHero = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  width: 45%;
+export const HeroInner = styled.div`
+	max-width: 1120px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 48px;
+	align-items: center;
 
-  @media (max-width: 768px) {
-    width: 100%;
-    align-items: center;
-  }
+	@media (max-width: 900px) {
+		grid-template-columns: 1fr;
+	}
 `;
 
-export const Title = styled.h1`
-  font-size: 5rem;
-  margin-bottom: 1rem;
-  text-shadow: 5px 5px 10px #ff5722;
-  color: white;
-  
-  @media (max-width: 900px) {
-    font-size: 2.2rem;
-  }
+export const HeroText = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 `;
 
-export const Subtitle = styled.h2`
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-  color: #B3B3B3;
-
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-  }
+export const HeroSubtitle = styled.p`
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+	font-size: 0.8rem;
+	color: var(--muted);
 `;
 
-export const Button = styled.a`
-  padding: 1rem 2rem;
-  background: #ff5722;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-
-  &:hover {
-    background: #e03400ff;
-  }
-
-  @media (max-width: 768px) {
-    padding: 0.8rem 1.5rem;
-  }
+export const HeroTitle = styled.h1`
+	font-family: var(--font-title);
+	font-size: clamp(2.6rem, 4vw, 3.6rem);
+	line-height: 1.1;
 `;
 
-export const Image = styled(motion.img)`
-  width: 100%;
-  height: 100vh;
-  border-radius: 16px;
-  object-fit: cover;
-  @media (max-width: 768px) {
-    height: auto;
-  }
+export const HeroActions = styled.div`
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+`;
+
+export const PrimaryButton = styled.a`
+	padding: 14px 26px;
+	border-radius: 999px;
+	background: var(--accent);
+	color: #fff;
+	font-weight: 700;
+	box-shadow: 0 16px 30px rgba(28, 77, 93, 0.25);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 20px 38px rgba(28, 77, 93, 0.3);
+	}
+`;
+
+export const GhostButton = styled.a`
+	padding: 14px 26px;
+	border-radius: 999px;
+	border: 1px solid var(--stroke);
+	color: var(--text);
+	font-weight: 700;
+	transition: border 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+	&:hover {
+		border-color: var(--accent);
+		color: var(--accent);
+		transform: translateY(-2px);
+	}
+`;
+
+export const HeroCard = styled.div`
+	background: var(--surface);
+	border-radius: var(--radius-lg);
+	padding: 32px;
+	box-shadow: var(--shadow);
+	border: 1px solid var(--stroke);
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+
+	h3 {
+		font-family: var(--font-title);
+		font-size: 1.4rem;
+	}
+
+	p {
+		color: var(--muted);
+	}
+`;
+
+export const HeroMeta = styled.div`
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 12px;
+
+	@media (max-width: 600px) {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+`;
+
+export const MetaItem = styled.div`
+	background: var(--surface-alt);
+	padding: 14px 16px;
+	border-radius: var(--radius-md);
+	border: 1px solid var(--stroke);
+	text-align: center;
+
+	span {
+		font-weight: 700;
+		font-size: 1.1rem;
+		display: block;
+	}
+
+	small {
+		color: var(--muted);
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+	}
 `;

@@ -1,131 +1,107 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
 
-export const Container = styled.section`
-  display: flex;
-  gap: 2rem;
-  padding: 4rem 2rem;
-  align-items: center;
-  flex-wrap: wrap;
-  background: #0d0d0d;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    padding: 2rem 1rem;
-    gap: 1.5rem;
-  }
+export const ContactSection = styled.section`
+	padding: 80px 24px 100px;
 `;
 
-export const Left = styled(motion.div)`
-  flex: 1;
-  min-width: 300px;
+export const ContactInner = styled.div`
+	max-width: 1120px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 40px;
 
-  @media (max-width: 768px) {
-    text-align: center;
-  }
+	@media (max-width: 960px) {
+		grid-template-columns: 1fr;
+	}
 `;
 
-export const Right = styled(motion.div)`
-  flex: 1;
-  min-width: 300px;
-  width: 100%;
+export const ContactTitle = styled.h2`
+	font-family: var(--font-title);
+	font-size: clamp(2rem, 3vw, 2.6rem);
+	margin-bottom: 16px;
 `;
 
-export const Title = styled.h2`
-  font-size: 2rem;
-  color: #fff;
-  margin-bottom: 1rem;
-
-  @media (max-width: 768px) {
-    font-size: 1.6rem;
-  }
+export const ContactSubtitle = styled.p`
+	color: var(--muted);
+	max-width: 520px;
 `;
 
-export const Subtitle = styled.p`
-  color: #bbb;
-  font-size: 1rem;
-  line-height: 1.5;
+export const ContactGrid = styled.div`
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 16px;
+	margin-top: 28px;
 
-  @media (max-width: 768px) {
-    font-size: 0.95rem;
-  }
+	@media (max-width: 960px) {
+		grid-template-columns: 1fr;
+	}
 `;
 
-export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+export const ContactCard = styled.div`
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	background: var(--surface);
+	width: 100%;
+	padding: 18px;
+	border-radius: var(--radius-sm);
+	border: 1px solid var(--stroke);
+	box-shadow: 0 16px 30px rgba(15, 45, 55, 0.08);
+
+	h4 {
+		font-family: var(--font-title);
+		margin-bottom: 6px;
+	}
+
+	a {
+		color: var(--muted);
+		overflow-wrap: anywhere;
+	}
 `;
 
-export const Input = styled.input`
-  padding: 0.8rem;
-  border: none;
-  border-radius: 6px;
-  background: #222;
-  color: #fff;
-  outline: none;
-  font-size: 1rem;
-
-  &::placeholder {
-    color: #777;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 0.9rem;
-    padding: 0.7rem;
-  }
+export const ContactForm = styled.form`
+	background: var(--surface);
+	border-radius: var(--radius-lg);
+	padding: 32px;
+	border: 1px solid var(--stroke);
+	box-shadow: var(--shadow);
+	display: grid;
+	gap: 16px;
 `;
 
-export const Textarea = styled.textarea`
-  padding: 0.8rem;
-  border: none;
-  border-radius: 6px;
-  background: #222;
-  color: #fff;
-  outline: none;
-  resize: none;
-  font-size: 1rem;
+export const InputGroup = styled.div`
+	display: grid;
+	gap: 8px;
 
-  &::placeholder {
-    color: #777;
-  }
+	label {
+		font-weight: 700;
+		font-size: 0.9rem;
+	}
 
-  @media (max-width: 480px) {
-    font-size: 0.9rem;
-    padding: 0.7rem;
-  }
+	input,
+	textarea {
+		padding: 12px 14px;
+		border-radius: var(--radius-sm);
+		border: 1px solid var(--stroke);
+		background: var(--surface-alt);
+		font-family: var(--font-body);
+	}
 `;
 
-export const Button = styled.button`
-  background: #ff5722;
-  color: #fff;
-  padding: 0.8rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
+export const SubmitButton = styled.button`
+	border: none;
+	background: var(--accent);
+	color: #fff;
+	padding: 14px 20px;
+	border-radius: 999px;
+	font-weight: 700;
+	cursor: pointer;
+	box-shadow: 0 14px 26px rgba(28, 77, 93, 0.25);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-  &:hover {
-    background: #e03400ff;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 0.9rem;
-    padding: 0.7rem;
-  }
-`;
-
-export const StatusMessage = styled.p`
-  font-size: 0.9rem;
-  padding: 0.6rem;
-  border-radius: 6px;
-  text-align: center;
-  color: ${({ $type }) => ($type === "success" ? "#d4edda" : "#f8d7da")};
-  background: ${({ $type }) => ($type === "success" ? "#155724" : "#721c24")};
-  opacity: 0.9;
-
-  @media (max-width: 480px) {
-    font-size: 0.85rem;
-  }
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 18px 32px rgba(28, 77, 93, 0.3);
+	}
 `;
