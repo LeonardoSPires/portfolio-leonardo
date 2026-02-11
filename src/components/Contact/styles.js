@@ -105,3 +105,9 @@ export const SubmitButton = styled.button`
 		box-shadow: 0 18px 32px rgba(28, 77, 93, 0.3);
 	}
 `;
+
+export const StatusMessage = styled.p`
+	font-size: 0.9rem;
+	margin-top: 4px;
+	color: ${({ success }) => (success ? '#1b8a5a' : '#d64545')};
+`;

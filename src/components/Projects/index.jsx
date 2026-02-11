@@ -13,19 +13,19 @@ import {
 const projects = [
   {
     title: 'Palestrante Elga',
-    description: 'Site institucional com foco em autoridade e conversao.',
+    description: 'Site institucional para palestrante, focado em autoridade, posicionamento de marca pessoal e conversão de novas palestras.',
     tags: ['React', 'Vite', 'Styled Components'],
     url: 'https://www.elgacosta.com.br/',
   },
   {
     title: 'Eua For Adults',
-    description: 'Site para aulas particulares de ingles com visual limpo.',
+    description: 'Site para aulas de inglês voltadas ao público adulto, responsiva e centrada na captação de alunos.',
     tags: ['React', 'Vite', 'Styled Components'],
     url: 'https://euaforadults.com',
   },
   {
     title: 'Dev Movies',
-    description: 'Resumo de filmes com trailer e dados via API.',
+    description: 'Dashboard de filmes que exibe sinopse, avaliação e trailer consumindo uma API pública, com interface responsiva e foco em experiência do usuário.',
     tags: ['React', 'API', 'UI'],
     url: 'https://leonardospires.github.io/dev-movies/',
   },

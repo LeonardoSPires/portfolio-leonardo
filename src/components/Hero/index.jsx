@@ -26,7 +26,7 @@ const Hero = () => {
         >
           <HeroSubtitle>Desenvolvedor Fullstack jr</HeroSubtitle>
           <HeroTitle>
-            Portfolio moderno, limpo e claro para produtos digitais.
+            Sites e projeto modernos, limpos e claro para produtos digitais.
           </HeroTitle>
           <HeroActions>
             <PrimaryButton href="#projects">Ver projetos</PrimaryButton>
